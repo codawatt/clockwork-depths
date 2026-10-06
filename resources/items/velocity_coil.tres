@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemDefinition" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_definition.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/stat_modifier.gd" id="2"]
+
+[sub_resource type="Resource" id="ModifierSpeed"]
+script = ExtResource("2")
+stat_name = &"move_speed"
+additive = 1.5
+
+[resource]
+script = ExtResource("1")
+item_id = &"velocity_coil"
+display_name = "Velocity Coil"
+description = "An accessory that makes movement visibly faster."
+item_type = 2
+max_stack_size = 1
+equipment_slot = 5
+modifiers = Array[ExtResource("2")]([SubResource("ModifierSpeed")])
+behavior_id = &"speed"
+color = Color(0.9, 0.25, 0.92, 1)

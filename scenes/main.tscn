@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ceu2gkaer0ml3"]
+
+[ext_resource type="Script" uid="uid://cid3tpus5robu" path="res://scripts/game/game_root.gd" id="1"]
+
+[node name="ClockworkDepths" type="Node" unique_id=182377293]
+script = ExtResource("1")

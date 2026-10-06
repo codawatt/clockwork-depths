@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemDefinition" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_definition.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/stat_modifier.gd" id="2"]
+
+[sub_resource type="Resource" id="ModifierCharge"]
+script = ExtResource("2")
+stat_name = &"charge_power"
+additive = 0.75
+
+[resource]
+script = ExtResource("1")
+item_id = &"prism_charm"
+display_name = "Prism Charm"
+description = "Amplifies the charged attack and launches a second pulse."
+item_type = 2
+max_stack_size = 1
+equipment_slot = 5
+modifiers = Array[ExtResource("2")]([SubResource("ModifierCharge")])
+behavior_id = &"double_charge"
+color = Color(0.35, 1, 0.92, 1)

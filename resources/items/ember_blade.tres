@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ItemDefinition" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_definition.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/stat_modifier.gd" id="2"]
+
+[sub_resource type="Resource" id="ModifierDamage"]
+script = ExtResource("2")
+stat_name = &"attack_damage"
+additive = 9.0
+
+[sub_resource type="Resource" id="ModifierRange"]
+script = ExtResource("2")
+stat_name = &"attack_range"
+additive = 0.35
+
+[resource]
+script = ExtResource("1")
+item_id = &"ember_blade"
+display_name = "Ember Blade"
+description = "A boss-forged weapon with heavier hits and a wider arc."
+item_type = 2
+max_stack_size = 1
+equipment_slot = 1
+modifiers = Array[ExtResource("2")]([SubResource("ModifierDamage"), SubResource("ModifierRange")])
+base_damage = 9.0
+behavior_id = &"wide_combo"
+color = Color(1, 0.28, 0.08, 1)

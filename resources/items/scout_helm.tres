@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemDefinition" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_definition.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/stat_modifier.gd" id="2"]
+
+[sub_resource type="Resource" id="ModifierHealth"]
+script = ExtResource("2")
+stat_name = &"max_health"
+additive = 25.0
+
+[resource]
+script = ExtResource("1")
+item_id = &"scout_helm"
+display_name = "Scout Helm"
+description = "A reinforced helm that raises maximum health."
+item_type = 2
+max_stack_size = 1
+equipment_slot = 3
+modifiers = Array[ExtResource("2")]([SubResource("ModifierHealth")])
+behavior_id = &"health"
+color = Color(0.25, 0.9, 0.58, 1)

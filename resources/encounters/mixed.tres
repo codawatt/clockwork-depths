@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EncounterDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/encounter_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+encounter_id = &"conduit_ambush"
+room_id = &"hazard"
+enemy_ids = PackedStringArray("brass_mauler", "arc_sentry", "brass_mauler", "arc_sentry")
+spawn_offsets = Array[Vector3]([Vector3(-5, 0, -4), Vector3(4, 0, -4), Vector3(4, 0, 4), Vector3(-4, 0, 4)])
+spawn_manifest = "brass_mauler@-5,0,-4;arc_sentry@4,0,-4;brass_mauler@4,0,4;arc_sentry@-4,0,4"
+objective_text = "Survive the conduit ambush"
